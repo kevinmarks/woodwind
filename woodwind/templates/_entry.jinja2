@@ -1,6 +1,6 @@
 {% for context in entry.reply_context %}
   <article class="reply-context">
-    <header>
+    <details open><summary><header>
       {% if context.author_photo %}
         <img src="{{context.author_photo|proxy_image}}"/>
       {% endif %}
@@ -12,6 +12,7 @@
     {% if context.title %}
       <h1>{{ context.title|e }}</h1>
     {% endif %}
+    </summary>
     {% if context.content %}
       <div class="content">
         {{ context.content_cleaned | proxy_all | add_preview }}
@@ -24,6 +25,7 @@
         </time>
       </a>
     </footer>
+  </details>
   </article>
 {% endfor %}
 
