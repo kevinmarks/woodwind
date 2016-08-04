@@ -423,7 +423,7 @@ article {
   article.reply-context {
     margin-bottom: 0;
     background-color: #f3f3f3;
-    color: #555; }
+    color: black; }
     article.reply-context .content img {
       max-height: 240px;
       max-width: 240px; }
